@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "43f96e43-a15c-4868-b65f-de0e9967ba6b",
+		"name": "Pdf Generator service Example",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "pdfGeneratorService",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/hola",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"hola"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "generate Pdf file",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"exampletemplate\",\n    \"name\":\"eduardo_contreras\",\n    \"data\":{        \n        \"For\":\"valor\",\n        \"toto\":\"juan\",\n        \"to\":\"Eduardo\"\n    }\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/generatepdf",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"generatepdf"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
